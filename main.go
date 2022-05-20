@@ -11,7 +11,7 @@ func main(){
 	var email string
 	var tickets uint
 
-	var bookings [1] string
+	var bookings [] string
 
 	fmt.Printf("Welcome to %v Booking Application\n",ConfName)
 	fmt.Println("Get your conference tickets here")
@@ -32,9 +32,10 @@ func main(){
 	remainingTickets = remainingTickets - tickets
 
 	// Storing the user info in an array
-	bookings[0] = firstName + " " + lastName
+	// bookings[0] = firstName + " " + lastName
+	bookings = append(bookings,firstName + " " + lastName)
 	fmt.Printf("The whole array: %v\n",bookings)
-	fmt.Printf("The first value: %v\n",bookings[0])
+	// fmt.Printf("The first value: %v\n",bookings[0])
 
 
 	// ask the user for their name
